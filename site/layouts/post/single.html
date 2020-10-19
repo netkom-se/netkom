@@ -3,9 +3,28 @@
   <div class="mw6 center ph3 pv4">
     <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
     <div class="flex justify-between grey-3">
-      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-      <p>Read in {{ .ReadingTime }} minutes</p>
+      <p>{{ .Date.Format "2 Jan, 2006" }}</p>
+      <p>Läsning: ungefär {{ .ReadingTime }} minuter</p>
     </div>
+    
+<div class="flex-ns justify-between">
+
+<div>
+<div class="f6 b mb1">redigera med:</div>
+
+<p><a href="https://www.netkom.se/admin/#/collections/post/entries/{{ if .IsPage }}{{ .File.TranslationBaseName }}{{ end }}" 
+					      class="no-underline pa1 bg-grey-1 br1 mb1 db primary">&#x2B54; NetlifyCMS</a></p>
+<p><a href="https://github.com/netkom-se/netkom/edit/master/site/content/{{ if .IsPage }}{{ .File.Path }}{{ end }}" 
+					      class="no-underline pa1 bg-grey-1 br1 mb1 db primary">&#x2B53; Github</a></p>
+</div>
+
+<div>
+<div class="f4 b lh-title mb1 primary">Innehållsförteckning</div>
+<p>{{.TableOfContents}}</p>
+</div>
+
+</div>
+
     <div class="cms mw6">
       <p>{{ .Description }}</p>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
