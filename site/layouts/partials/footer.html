@@ -9,11 +9,7 @@
 
 
 			<p class="f3 lh-title light-gray b tc mb2">Netkom digitala kompendier</p>
-			<form method="get" action="https://duckduckgo.com/" id="searchform" onsubmit="document.getElementById('searchbox').value += ' site:https://www.netkom.se';">
-            <input type="hidden" name="sites" value="netkom.se">
-            <input type="text" autocomplete="off" name="q" id="searchbox" value="" size="16" placeholder="Sök med DuckDuckGo">
-            <input type="submit" value="sök">
-            </form>
+
 		</div>
 
 		<div class="flex-ns justify-between">
@@ -26,7 +22,15 @@
 				om inget annat anges
 		</div>
 			<div>
-				<h3 class="f4 b lh-title mb1 primary">Kaldi</h3>
+			<h3 class="f4 b lh-title mb1">	
+				<form method="get" action="https://duckduckgo.com/" id="searchform" onsubmit="document.getElementById('searchbox').value += ' site:https://www.netkom.se';">
+				<div>
+                <input type="hidden" name="sites" value="netkom.se">
+                <input type="text" autocomplete="off" name="q" id="searchbox" value="" size="16" placeholder="Sök med DuckDuckGo">
+                <input type="submit" value="Sök netkom.se">
+              </div>
+            </form>
+            </h3>
 				<ul class="mb3">
 					<li><a href="/" class="link">Home</a></li>
 					<li><a href="/products" class="link">Our products</a></li>
@@ -38,7 +42,7 @@
 
 
 			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
+				<h3 class="f4 b lh-title mb2">Social media</h3>
 				<ul class="mhn2">
 					{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook") }}
 					{{ partial "social-icon" (dict "link" "#" "svg" "icons-twitter") }}
