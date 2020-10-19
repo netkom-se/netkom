@@ -5,11 +5,16 @@
 		<div class="measure-narrow center mb4">
 
 			<img src="/img/logo.svg" alt="Kaldi logo" class="db w4 center mb4 br0">
-			<p class="f3 lh-title light-gray b tc mb2">Newsletter subscribe</p>
-			<p>Get awesome news from us in your inbox every two weeks. Be the first to learn about new products.</p>
+			<p class="f3 lh-title light-gray b tc mb2">digitala kompendier</p>
+			<p>Sök på hemsidan:</p>
 
-			{{ partial "newsletter-form" . }}
-
+	<form method="get" action="https://duckduckgo.com/" id="searchform" onsubmit="document.getElementById('searchbox').value += ' site:https://www.netkom.se';">
+      <div>
+        <input type="hidden" name="sites" value="netkom.se">
+        <input type="text" autocomplete="off" name="q" id="searchbox" value="" size="16" placeholder="Sök med DuckDuckGo">
+        <input type="submit" value="Sök netkom.se">
+      </div>
+    </form>
 		</div>
 
 		<div class="flex-ns justify-between">
