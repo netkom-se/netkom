@@ -1,6 +1,13 @@
 <footer class="bg-black ph3 pv4 white">
 
 	<div class="mw7 center pt3">
+			<form method="get" action="https://duckduckgo.com/" id="searchform" onsubmit="document.getElementById('searchbox').value += ' site:https://www.netkom.se';">
+				<div>
+                <input type="hidden" name="sites" value="netkom.se">
+                <input type="text" autocomplete="off" name="q" id="searchbox" value="" size="16" placeholder="Sök med DuckDuckGo">
+                <input type="submit" value="sök">
+              </div>
+        </form>
 
 		<div class="measure-narrow center mb4">
 
@@ -13,13 +20,6 @@
 		</div>
 
 		<div class="flex-ns justify-between">
-		<form method="get" action="https://duckduckgo.com/" id="searchform" onsubmit="document.getElementById('searchbox').value += ' site:https://www.netkom.se';">
-				<div>
-                <input type="hidden" name="sites" value="netkom.se">
-                <input type="text" autocomplete="off" name="q" id="searchbox" value="" size="16" placeholder="Sök med DuckDuckGo">
-                <input type="submit" value="sök">
-              </div>
-        </form>
 
 		<div class="page__footer-copyright"><span class="page__footer-copyleft">&copy;</span> {{ now.Format "2006"}} <b> Netkom.se </b> 
 			<br> Sidan skapad med <a href="https://gohugo.io" rel="nofollow" onclick="handleLinkClick('https://gohugo.io'); return false;">Hugo</a> och 
